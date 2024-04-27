@@ -1,5 +1,5 @@
 -- use {'kyazdani42/nvim-tree.lua'}
--- use {'kyazdani42/nvim-web-devicons'} -- opcional, para iconos de archivo
+ use {'kyazdani42/nvim-web-devicons'} -- opcional, para iconos de archivo
 
 -- disable netrw at the very start
 vim.g.loaded_netrw = 1
