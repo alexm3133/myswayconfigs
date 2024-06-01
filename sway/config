@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term env WAYLAND_DISPLAY= alacritty    
+set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -27,7 +27,7 @@ set $menu rofi -show drun -theme /home/alex/.local/share/rofi/themes/rounded-nor
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/) // scaling mode options: fill, fit, stretch, center, tile
-output * bg /home/alex/alexcode/wallpapers/moon.jpg stretch
+output * bg /home/alex/wallpapers/1.png stretch
 #
 # Example configuration:
 #
@@ -229,3 +229,5 @@ font pango:SourceCodePro Nerd Font 10
 #gaps
 gaps inner 10px
 gaps outer 10px
+
+include /usr/share/icons/Papirus/48x48/status
