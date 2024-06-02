@@ -67,7 +67,7 @@ sudo bash -c 'cat <<EOF > /usr/share/wayland-sessions/sway.desktop
 [Desktop Entry]
 Name=Sway
 Comment=An i3-compatible Wayland compositor
-Exec=sway
+Exec=sway --unsupported-gpu
 Type=Application
 DesktopNames=Sway
 EOF'
