@@ -1,24 +1,35 @@
-
 # Set the mod key to the 'Windows' key
 set $mod Mod4
 
-# Home row direction keys, like vim
+#row direction keys
 set $left h
 set $down j
 set $up k
 set $right l
 
-# Your preferred terminal emulator
 set $term kitty
 
 # Lock the screen
 bindsym $mod+Shift+l exec $HOME/.config/sway/scripts/lockscreen.sh
 
+#increase and decrease brightness of the keyboard
+bindsym XF86Search exec $HOME/.config/sway/scripts/increase_keyboard_brightness.sh
+bindsym XF86LaunchA exec $HOME/.config/sway/scripts/decrease_keyboard_brightness.sh
+
+# Volume control
+bindsym XF86AudioRaiseVolume exec pamixer -i 5
+bindsym XF86AudioLowerVolume exec pamixer -d 5
+bindsym XF86AudioMute exec pamixer -t
+
+# Brightness control
+bindsym XF86MonBrightnessUp exec light -A 5
+bindsym XF86MonBrightnessDown exec light -U 5
+
 # Application launcher
 set $menu rofi -show drun -theme $HOME/.local/share/rofi/themes/rounded-nord-dark.rasi
 
 # Set the wallpaper
-output * bg $HOME/wallpapers/1.jpg stretch
+output * bg $HOME/wallpapers/4.png stretch
 
 # Sway idle configuration
 exec swayidle -w \
@@ -160,8 +171,6 @@ bindsym $mod+minus scratchpad show
 
 #
 # Resizing containers:
-#
-
 mode "resize" {
     # left will shrink the containers width
     # right will grow the containers width
@@ -201,5 +210,13 @@ include /etc/sway/config.d/*
 font pango:SourceCodePro Nerd Font 10
 
 # Gaps
-gaps inner 10px
-gaps outer 10px
+smart_gaps on
+gaps inner 10
+
+
+#color 
+client.focused  #000000 #000000 #000000 #000000
+
+
+
+

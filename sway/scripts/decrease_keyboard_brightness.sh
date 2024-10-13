@@ -15,5 +15,5 @@ if [ "$NEW_BRIGHTNESS" -lt 0 ]; then
 fi
 
 # Set the new brightness
-echo $NEW_BRIGHTNESS | sudo tee $BRIGHTNESS_FILE
+echo $NEW_BRIGHTNESS | sudo tee $BRIGHTNESS_FILE > /dev/null
 
