@@ -17,13 +17,19 @@ bindsym XF86Search exec $HOME/.config/sway/scripts/increase_keyboard_brightness.
 bindsym XF86LaunchA exec $HOME/.config/sway/scripts/decrease_keyboard_brightness.sh
 
 # Volume control
-bindsym XF86AudioRaiseVolume exec pamixer -i 5
-bindsym XF86AudioLowerVolume exec pamixer -d 5
-bindsym XF86AudioMute exec pamixer -t
+bindsym XF86AudioRaiseVolume exec volumectl -u up
+bindsym XF86AudioLowerVolume exec volumectl -u down
+bindsym XF86AudioMute exec volumectl toggle-mute
 
 # Brightness control
-bindsym XF86MonBrightnessUp exec light -A 5
-bindsym XF86MonBrightnessDown exec light -U 5
+bindsym XF86MonBrightnessUp exec lightctl up
+bindsym XF86MonBrightnessDown exec lightctl down
+
+exec $HOME/.config/sway/scripts/start_avizo.sh
+
+
+#flameshot 
+bindsym $mod+p exec flameshot gui
 
 # Application launcher
 set $menu rofi -show drun -theme $HOME/.local/share/rofi/themes/rounded-nord-dark.rasi

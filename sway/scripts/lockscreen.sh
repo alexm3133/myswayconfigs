@@ -9,7 +9,7 @@ swaylock \
     --effect-blur 7x5 \
     --effect-vignette 0.5:0.5 \
     --ring-color bb00cc \
-    --key-hl-color 880033 \
+    --key-hl-color 070008 \
     --line-color 00000000 \
     --inside-color 00000088 \
     --separator-color 00000000 \
